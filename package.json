@@ -8,7 +8,8 @@
     "access": "public"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "echo \"no build script\""
   },
   "keywords": [
     "cli",
@@ -20,8 +21,8 @@
     "arg": "^4.1.0",
     "chalk": "^2.4.2",
     "covgen": "^3.1.0",
-    "esm": "^3.2.18",
     "execa": "^1.0.0",
+    "fs-extra": "^8.1.0",
     "gitignore": "^0.6.0",
     "inquirer": "^6.2.2",
     "listr": "^0.14.3",
@@ -33,5 +34,8 @@
     "bin/",
     "src/",
     "templates/"
-  ]
+  ],
+  "devDependencies": {
+    "esm": "^3.2.25"
+  }
 }

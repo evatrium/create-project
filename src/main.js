@@ -47,13 +47,11 @@ async function initGit(options) {
 }
 
 function generateFilesFromParts(options) {
-    let pkg = packagejson(options);
-    let rdme = readme(options);
-    let rlp = rollupconfig(options);
-
-    return fse.writeFile(options.targetDirectory + '/package.json', pkg)
-        .then(() => fse.writeFile(options.targetDirectory + '/README.MD', rdme))
-        .then(() => fse.writeFile(options.targetDirectory + '/rollup.config.lib.js', rlp));
+    return Promise.all([
+        fse.writeFile(options.targetDirectory + '/package.json', packagejson(options)),
+        fse.writeFile(options.targetDirectory + '/README.MD', readme(options)),
+        fse.writeFile(options.targetDirectory + '/rollup.config.lib.js', rollupconfig(options))
+    ])
 }
 
 export async function createProject(options) {

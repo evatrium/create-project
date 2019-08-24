@@ -1,4 +1,5 @@
 export default (options)=>{
+
     let pkg = {
         name: options.npm_namespace + "/" + (options.npm_library_name || ''),
         version: "0.0.1",

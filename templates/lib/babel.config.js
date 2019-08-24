@@ -1,4 +1,5 @@
 module.exports = {
+  "presets": process.env.NODE_ENV === 'test' ? ["@babel/preset-env"] : [],
   plugins: [
     ["transform-inline-environment-variables"],
     ["@babel/plugin-syntax-dynamic-import"],
@@ -21,5 +22,10 @@ module.exports = {
         "loose": true
       }
     ],
+    ["./template-string-minifier-autoprefixer", {
+      "tag": "jcss",
+      "replace": "",
+      "plugins": [["autoprefixer"]]
+    }],
   ]
 };

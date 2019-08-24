@@ -17,12 +17,12 @@ export default (options)=>{
             "build": "rimraf lib && rollup -c rollup.config.lib.js",
             "start": "es-dev-server"
         },
+        peerDependenciesMeta: {},
         dependencies: {},
         devDependencies: {
             "@atomico/rollup-plugin-sizes": "^1.0.3",
             "@babel/core": "^7.5.5",
             "@babel/plugin-proposal-class-properties": "^7.5.5",
-            "@babel/plugin-proposal-decorators": "^7.4.4",
             "@babel/plugin-syntax-dynamic-import": "^7.2.0",
             "@babel/plugin-syntax-import-meta": "^7.2.0",
             "@babel/plugin-transform-react-jsx": "^7.3.0",

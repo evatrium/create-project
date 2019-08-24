@@ -34,7 +34,8 @@
   "files": [
     "bin/",
     "src/",
-    "templates/"
+    "templates/",
+    "template_parts/"
   ],
   "devDependencies": {
     "jest": "^24.9.0"

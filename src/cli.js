@@ -45,14 +45,14 @@ async function promptForMissingOptions(options) {
         });
     }
 
-    // if (!options.git) {
-    //   questions.push({
-    //     type: 'confirm',
-    //     name: 'git',
-    //     message: 'Should a git be initialized?',
-    //     default: false,
-    //   });
-    // }
+    if (!options.git) {
+      questions.push({
+        type: 'confirm',
+        name: 'git',
+        message: 'Should a git be initialized?',
+        default: false,
+      });
+    }
     questions.push({
         type: 'input',
         name: 'npm_namespace',
@@ -87,8 +87,8 @@ async function promptForMissingOptions(options) {
     return {
         ...options,
         ...answers,
-        // git: options.git || answers.git,
-        git: true,
+        git: options.git || answers.git,x
+        // git: true,
     };
 }
 

@@ -87,7 +87,7 @@ async function promptForMissingOptions(options) {
     return {
         ...options,
         ...answers,
-        git: options.git || answers.git,x
+        git: options.git || answers.git,
         // git: true,
     };
 }

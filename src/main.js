@@ -12,7 +12,6 @@ import fse from 'fs-extra';
 
 import packagejson from '../template_parts/lib/packagejson'
 import readme from '../template_parts/lib/readme'
-import rollupconfig from '../template_parts/lib/rollupconfig'
 
 
 const access = promisify(fs.access);
@@ -50,7 +49,6 @@ function generateFilesFromParts(options) {
     return Promise.all([
         fse.writeFile(options.targetDirectory + '/package.json', packagejson(options)),
         fse.writeFile(options.targetDirectory + '/README.MD', readme(options)),
-        fse.writeFile(options.targetDirectory + '/rollup.config.lib.js', rollupconfig(options))
     ])
 }
 

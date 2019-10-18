@@ -21,7 +21,7 @@ ${ticks}
 
 [MIT]: https://choosealicense.com/licenses/mit/
 
-This project was generated with @iosio/create-project
+
 `;
 
 }
